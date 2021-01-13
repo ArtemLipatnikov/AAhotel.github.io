@@ -1,6 +1,15 @@
-// $tomato: #ef6c00;
+$text: #686978;
+$title: #474C65;
+$bg: #F9F8F8;
 
-// @mixin f300 {
-//   font-family: 'Roboto', sans-serif;
-//   font-weight: 300;
-// }
+@mixin f700 {
+	font-family: 'DroidSans-Bold';
+  font-weight: 700;
+}
+
+@mixin bgsrp {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
