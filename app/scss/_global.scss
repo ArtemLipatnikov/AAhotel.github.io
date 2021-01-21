@@ -42,6 +42,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  letter-spacing: 0.03em;
   color: #686978;
   overflow-x: hidden;
 }
@@ -50,4 +51,15 @@ body {
   max-width: 1212px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.globbutton {
+  font-family: 'DroidSans-Bold';
+  font-weight: 700;
+  padding: 15px 38px;
+  border: 2px solid #AE4314;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  outline: none;
 }

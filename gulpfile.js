@@ -41,6 +41,7 @@ function images() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/flatpickr/dist/flatpickr.js',
     'node_modules/swiper/swiper-bundle.js',
     'app/js/main.js'
   ])
@@ -54,6 +55,7 @@ function scripts() {
 function styles() {
   return src([
     'node_modules/normalize.css/normalize.css',
+    'node_modules/flatpickr/dist/flatpickr.css',
     'node_modules/swiper/swiper.min.css',
     'app/scss/style.scss'
   ])

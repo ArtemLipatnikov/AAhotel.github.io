@@ -79,21 +79,31 @@
       <div class="container">
         <div class="registration__inner">
           <div class="registration__box-title">
-            <div class="registration__title"></div>
-            <div class="registation__text"></div>
+            <div class="registration__title">Забронируйте номер</div>
+            <div class="registration__text">Система онлайн-бронирования</div>
           </div>
+          <form class="form" action="#">
+            <div class="form__col">
+              <label class="form__label" for="date1">Заезд</label>
+              <div class="form__input-box">
+                <input class="form__input-date" type="date" name="date" id="date1">
+              </div>
+            </div>
+            <div class="form__col">
+              <label class="form__label" for="date2">Выезд</label>
+              <div class="form__input-box">
+                <input class="form__input-date" type="date" name="date" id="date2">
+              </div>
+            </div>
+            <div class="form__col">
+              <label class="form__label" for="number">Кол-во ночей</label>
+              <div class="form__input-box form__input-numberbox">
+                <input class="form__input-number" type="number" name="number" id="number" placeholder="13">
+              </div>
+            </div>
+            <button class="form__button globbutton" type="button">Найти номер</button>
+          </form>
         </div>
-        <form class="form" action="#">
-          <label class="label">
-            <input class="form__input" type="date" name="date">
-          </label>
-          <label class="label">
-            <input class="form__input" type="date" name="date">
-          </label>
-          <label class="label">
-            <input class="form__input" type="date" name="date">
-          </label>
-        </form>
       </div>
     </div>
 
