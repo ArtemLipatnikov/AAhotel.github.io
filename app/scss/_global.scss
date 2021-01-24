@@ -62,4 +62,20 @@ body {
   letter-spacing: 0.03em;
   cursor: pointer;
   outline: none;
+  &__footer {
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.title {
+  font-family: 'DroidSans-Bold';
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #474C65;
 }

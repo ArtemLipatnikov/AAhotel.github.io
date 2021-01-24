@@ -28,73 +28,6 @@
     }
   }
 
-  &__social-instagramm,
-  &__social-vk {
-    font-size: 0;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url(../images/icons/instagram.svg);
-      height: 19px;
-      width: 19px;
-    }
-  }
-
-  &__social-vk {
-    &::before {
-      background-image: url(../images/icons/vk.svg);
-      height: 31px;
-      width: 31px;
-      left: 20px;
-      top: -5px;
-    }
-  }
-
-  &__tel-text {
-    font-size: 14px;
-    margin-right: 11px;
-    letter-spacing: 0.01em;
-  }
-
-  &__tel-telegramm,
-  &__tel-whatsapp,
-  &__tel-telephone {
-    margin-right: 20px;
-    font-size: 0;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url(../images/icons/telegramm.svg);
-      @include bgsrp;
-      height: 17px;
-      width: 20px;
-      top: -5px;
-      left: 0;
-    }
-  }
-
-  &__tel-whatsapp {
-    &::before {
-      background-image: url(../images/icons/whatsapp.svg);
-      width: 17px;
-    }
-  }
-
-  &__tel-telephone {
-    &::before {
-      background-image: url(../images/icons/phone.svg);
-      width: 17px;
-    }
-  }
-
-  &__tel-number {
-    @include f700;
-    font-size: 16px;
-    color: $title;
-  }
-
   &__wrapper {
     background-color: $bg;
   }
@@ -132,6 +65,77 @@
   }
 }
 
+.social {
+  &__instagramm,
+  &__vk {
+    font-size: 0;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/instagram.svg);
+      height: 19px;
+      width: 19px;
+    }
+  }
+
+  &__vk {
+    &::before {
+      background-image: url(../images/icons/vk.svg);
+      height: 31px;
+      width: 31px;
+      left: 20px;
+      top: -5px;
+    }
+  }
+}
+
+.contacts {
+  &__text {
+    font-size: 14px;
+    margin-right: 11px;
+    letter-spacing: 0.01em;
+  }
+
+  &__telegramm,
+  &__whatsapp,
+  &__telephone {
+    margin-right: 20px;
+    font-size: 0;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/telegramm.svg);
+      @include bgsrp;
+      height: 17px;
+      width: 20px;
+      top: -5px;
+      left: 0;
+    }
+  }
+
+  &__whatsapp {
+    &::before {
+      background-image: url(../images/icons/whatsapp.svg);
+      width: 17px;
+    }
+  }
+
+  &__telephone {
+    &::before {
+      background-image: url(../images/icons/phone.svg);
+      width: 17px;
+    }
+  }
+
+  &__number {
+    @include f700;
+    font-size: 16px;
+    color: $title;
+  }
+}
+
 //end header
 //start presentation
 
@@ -144,7 +148,7 @@
   position: relative;
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     background-image: url(../images/MaskGroup.png);
     height: 604px;
     width: 108px;
@@ -269,12 +273,12 @@
     line-height: 18px;
     margin-bottom: 5px;
   }
-  
+
   &__input-box {
     position: relative;
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       top: 10px;
       right: 40px;
       height: 26px;
@@ -318,3 +322,399 @@
 }
 
 //end registration
+//start advantage
+
+.advantage {
+  background-color: $bg;
+
+  &__inner {
+    padding-top: 91px;
+    padding-bottom: 86px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 53px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    max-width: 46%;
+  }
+
+  &__item {
+    position: relative;
+    min-height: 33.33%;
+    padding-left: 120px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/advantage-icon1.svg);
+      @include bgsrp;
+      top: 5px;
+      left: 0;
+      height: 86px;
+      width: 93px;
+    }
+
+    &--icon2 {
+      &::before {
+        background-image: url(../images/icons/advantage-icon2.svg);
+        height: 55px;
+      }
+    }
+
+    &--icon3 {
+      &::before {
+        background-image: url(../images/icons/advantage-icon3.svg);
+        height: 66px;
+        width: 66px;
+      }
+    }
+
+    &--icon4 {
+      &::before {
+        background-image: url(../images/icons/advantage-icon4.svg);
+        height: 94px;
+        width: 94px;
+      }
+    }
+
+    &--icon5 {
+      &::before {
+        background-image: url(../images/icons/advantage-icon5.svg);
+        height: 70px;
+        width: 70px;
+      }
+    }
+
+    &--icon6 {
+      &::before {
+        background-image: url(../images/icons/advantage-icon6.png);
+        height: 101px;
+        width: 81px;
+      }
+    }
+  }
+
+  &__item-title {
+    @include f700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+
+  &__item-text {
+    margin-top: 0;
+  }
+}
+
+//end advantage
+//start apartments
+
+.apartments {
+  background-color: $bg;
+  position: relative;
+  padding-bottom: 172px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 415px;
+    width: 100%;
+    background: rgba(247, 243, 227, 0.875);
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      height: 2px;
+      width: 100%;
+      background: rgba(71, 76, 101, 0.5);
+    }
+  }
+
+  &__item {
+    max-width: 269px;
+    margin: 0 auto;
+    border-bottom: 4px solid transparent;
+    z-index: 5;
+    &:hover {
+      border-bottom: 4px solid #ae4314;
+    }
+  }
+
+  &__item-title {
+    font-size: 24px;
+  }
+
+  &__item-image {
+    height: 413px;
+    width: 269px;
+    object-fit: cover;
+  }
+
+  &__item-link {
+    padding: 15px 34px 15px 36px;
+    margin-bottom: 41px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #44435d;
+    color: #ffffff;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      background-color: #000000;
+    }
+
+    &:active {
+      color: $text;
+    }
+  }
+}
+
+//end apartments
+//start promotions
+
+.promotions {
+  padding-top: 18px;
+  padding-bottom: 100px;
+  background-color: $bg;
+
+  &__inner {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 78px;
+      bottom: 13px;
+      left: 50%;
+      right: 50%;
+      transform: translate(-34%, 0);
+      background-color: #44435D;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__item-wrapper {
+    margin-bottom: 60px;
+  }
+
+  &__item-slide {
+    max-height: 390px;
+    overflow: hidden;
+  }
+
+  &__item-imagebox {
+    height: 264px;
+    width: 378px;
+    object-fit: cover;
+    margin-bottom: 27px;
+  }
+
+  &__item-title {
+    margin-bottom: 14px;
+    width: 378px;
+    text-transform: uppercase;
+    @include f700;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    color: $title;
+  }
+
+  &__item-text {
+    width: 378px;
+
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-prev {
+    font-size: 0;
+    position: relative;
+    margin-right: 118px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/arrow-left.svg);
+      width: 27px;
+      height: 16px;
+    }
+  }
+
+  &__button-next {
+    font-size: 0;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/arrow-right.svg);
+      width: 27px;
+      height: 16px;
+    }
+  }
+}
+
+
+//end promotions
+//start footer
+
+
+.footer {
+  background-image: url(../images/footer-bg.jpg);
+  padding-top: 79px;
+  color: #ffffff;
+  
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 36px;
+    margin-bottom: 33px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 21px;
+  }
+
+  &__logo {
+    margin-right: 18px;
+  }
+
+  &__info-address {
+    max-width: 186px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01%;
+  }
+
+  &__info-right {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01%;
+  }
+
+  &__menu-title {
+    @include f700;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__navigation-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 56px;
+  }
+
+  &__navigation-link {
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01%;
+  }
+
+  &__bottom {
+    padding-bottom: 47px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+  }
+
+  &__bottom-title {
+    margin-bottom: 24px;
+  }
+
+  &__bottom-text {
+    font-size: 12px;
+    line-height: 17px;
+    margin: 0;
+  }
+}
+
+.contacts {
+  &__title {
+    @include f700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+
+  &__telephone--icon {
+    &::before {
+      background-image: url(../images/icons/phone-white.svg);
+    }
+  }
+
+  &__number {
+    &--display {
+      display: block;
+      margin-top: 13px;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+  }
+
+  &__instagramm,
+  &__vk {
+    display: block;
+    padding-left: 30px;
+    color: #ffffff;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/instagram-white.svg);
+      left: 0;
+      height: 19px;
+      width: 19px;
+    }
+  }
+
+  &__vk {
+    margin-top: 16px;
+    &::before {
+      background-image: url(../images/icons/vk-white.svg);
+      left: -4px;
+      height: 26px;
+      width: 26px;
+    }
+  }
+}
+
+
+//end footer
