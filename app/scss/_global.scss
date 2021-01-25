@@ -38,7 +38,7 @@ h6 {
 }
 
 body {
-  font-family: 'DroidSans-Regular';
+  font-family: "DroidSans-Regular";
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -47,17 +47,35 @@ body {
   overflow-x: hidden;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
 .container {
   max-width: 1212px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+.container-fluide {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .globbutton {
-  font-family: 'DroidSans-Bold';
+  font-family: "DroidSans-Bold";
   font-weight: 700;
   padding: 15px 38px;
-  border: 2px solid #AE4314;
+  border: 2px solid #ae4314;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   cursor: pointer;
@@ -68,14 +86,75 @@ body {
     font-size: 12px;
     line-height: 18px;
   }
+  &:hover,
+  &:focus {
+    color: #ae4314;
+  }
+
+  &:active {
+    color: #686978;
+    border: 2px solid #686978;
+  }
 }
 
 .title {
-  font-family: 'DroidSans-Bold';
+  font-family: "DroidSans-Bold";
   font-weight: 700;
   font-size: 32px;
   line-height: 42px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #474C65;
+  color: #474c65;
+}
+
+.breadcrumbs {
+  background-color: #F9F8F8;
+  &__inner {
+    padding: 26px 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  &__list {
+    font-family: "DroidSans-Regular";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #474C65;
+    li {
+      display: inline-block;
+      position: relative;
+      & + li {
+        padding-left: 24px;
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url(../images/icons/arrow-rightsmall.svg);
+          height: 8px;
+          width: 11px;
+          top: 3px;
+          left: 5px;
+          color: #474c65;
+        }
+      }
+      &:last-child {
+        a,
+        span {
+          color: #686978;
+          ;
+        }
+      }
+    }
+    a {
+      font-family: "DroidSans-Regular";
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+      color: #474C65;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

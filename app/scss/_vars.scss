@@ -13,3 +13,14 @@ $bg: #F9F8F8;
   background-position: center;
   position: absolute;
 }
+
+@mixin link {
+  &:hover,
+  &:focus {
+    color: #AE4314;
+  }
+
+  &:active {
+    color: $text;
+  }
+}

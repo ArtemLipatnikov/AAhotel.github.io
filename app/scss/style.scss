@@ -26,6 +26,8 @@
       height: 23px;
       width: 23px;
     }
+
+    @include link;
   }
 
   &__wrapper {
@@ -41,9 +43,11 @@
 }
 
 .logo {
-  height: 114px;
-  width: 114px;
-  margin-right: 173px;
+  &__image {
+    height: 114px;
+    width: 114px;
+    margin-right: 173px;
+  }
 }
 
 .nav {
@@ -62,6 +66,13 @@
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: $title;
+  }
+
+  &__link {
+    @include link;
+    &--active {
+      border-bottom: 2px solid #AE4314;
+    }
   }
 }
 
@@ -133,6 +144,7 @@
     @include f700;
     font-size: 16px;
     color: $title;
+    @include link;
   }
 }
 
@@ -143,7 +155,7 @@
   background-image: url(../images/present.jpg);
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-size: 65%;
+  background-size: contain;
   background-color: $bg;
   position: relative;
   &::before {
@@ -476,14 +488,7 @@
     background-color: #44435d;
     color: #ffffff;
     text-transform: uppercase;
-    &:hover,
-    &:focus {
-      background-color: #000000;
-    }
-
-    &:active {
-      color: $text;
-    }
+    @include link;
   }
 }
 
@@ -498,7 +503,7 @@
   &__inner {
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 2px;
       width: 78px;
@@ -506,7 +511,7 @@
       left: 50%;
       right: 50%;
       transform: translate(-34%, 0);
-      background-color: #44435D;
+      background-color: #44435d;
     }
   }
 
@@ -544,7 +549,6 @@
 
   &__item-text {
     width: 378px;
-
   }
 
   &__box {
@@ -580,16 +584,14 @@
   }
 }
 
-
 //end promotions
 //start footer
-
 
 .footer {
   background-image: url(../images/footer-bg.jpg);
   padding-top: 79px;
   color: #ffffff;
-  
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -614,6 +616,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.01%;
+    @include link;
   }
 
   &__info-right {
@@ -645,6 +648,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.01%;
+    @include link;
   }
 
   &__bottom {
@@ -686,6 +690,7 @@
       margin-top: 13px;
       margin-bottom: 12px;
       color: #ffffff;
+      @include link;
     }
   }
 
@@ -696,13 +701,14 @@
     color: #ffffff;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       background-image: url(../images/icons/instagram-white.svg);
       left: 0;
       height: 19px;
       width: 19px;
     }
+    @include link;
   }
 
   &__vk {
@@ -716,5 +722,137 @@
   }
 }
 
-
 //end footer
+// start about
+
+.about {
+  background-color: #F9F8F8;
+  &__main-image {
+    margin-bottom: 99px;
+  }
+
+  &__top {
+    display: flex;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__title {
+    max-width: 155px;
+    margin-right: 50px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+  
+  &__list {
+    max-width: 399px;
+    &--border {
+      border-left: 1px solid #44435D;
+      padding-left: 32px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__image1 {
+    height: 281px;
+    width: 391px;
+    object-fit: cover;
+    margin-left: 74px;
+    margin-bottom: 20px;
+  }
+
+  &__image2 {
+    height: 341px;
+    width: 499px;
+    object-fit: cover;
+  }
+
+  &__image3 {
+    height: 647px;
+    width: 389px;
+    object-fit: cover;
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    bottom: -230px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 909px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 270px;
+    padding-bottom: 100px;
+  }
+
+  &__image4 {
+    position: absolute;
+    width: 408px;
+    height: 575px;
+    top: 80px;
+    left: 510px;
+  }
+
+  &__image5 {
+    position: absolute;
+    width: 599px;
+    height: 787px;
+    top: -85px;
+    left: -120px;
+  }
+}
+
+//end about
+// start partners
+
+.partners {
+  background-color: #F9F8F8;
+  padding-bottom: 67px;
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 75px;
+    letter-spacing: 0.02em;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 24px;
+    z-index: 5;
+    padding-left: 34px;
+    padding-right: 34px;
+    background-color: #F9F8F8;
+  }
+
+  &__logotipes {
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px;
+    border-top: 1px solid #44435D;
+    border-bottom: 1px solid #44435D;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 33px;
+  }
+
+  &__image {
+    margin: 5px 19px;
+  }
+}
