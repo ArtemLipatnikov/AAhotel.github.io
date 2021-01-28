@@ -1,6 +1,6 @@
 @import "fonts";
-@import "global";
 @import "vars";
+@import "global";
 
 //start header
 
@@ -43,10 +43,10 @@
 }
 
 .logo {
+  margin-right: 173px;
   &__image {
     height: 114px;
     width: 114px;
-    margin-right: 173px;
   }
 }
 
@@ -70,8 +70,9 @@
 
   &__link {
     @include link;
+    color: $title;
     &--active {
-      border-bottom: 2px solid #AE4314;
+      border-bottom: 2px solid #ae4314;
     }
   }
 }
@@ -146,6 +147,12 @@
     color: $title;
     @include link;
   }
+}
+
+.main-image {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 //end header
@@ -421,7 +428,9 @@
   }
 
   &__item-text {
+    max-height: 66px;
     margin-top: 0;
+    overflow: hidden;
   }
 }
 
@@ -478,6 +487,11 @@
     height: 413px;
     width: 269px;
     object-fit: cover;
+  }
+
+  &__item-text {
+    max-height: 44px;
+    overflow: hidden;
   }
 
   &__item-link {
@@ -538,6 +552,7 @@
 
   &__item-title {
     margin-bottom: 14px;
+    max-height: 64px;
     width: 378px;
     text-transform: uppercase;
     @include f700;
@@ -545,10 +560,14 @@
     line-height: 32px;
     letter-spacing: 0.01em;
     color: $title;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__item-text {
     width: 378px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__box {
@@ -659,8 +678,13 @@
     letter-spacing: 0.01em;
   }
 
-  &__bottom-title {
+  &__bottom-link {
     margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-decoration: underline;
+    @include link;
   }
 
   &__bottom-text {
@@ -723,15 +747,15 @@
 }
 
 //end footer
-// start about
+
+//start about page
+//start about
 
 .about {
-  background-color: #F9F8F8;
-  &__main-image {
-    margin-bottom: 99px;
-  }
+  background-color: #f9f8f8;
 
   &__top {
+    padding-top: 110px;
     display: flex;
     position: relative;
     z-index: 5;
@@ -743,11 +767,11 @@
     font-size: 30px;
     line-height: 42px;
   }
-  
+
   &__list {
     max-width: 399px;
     &--border {
-      border-left: 1px solid #44435D;
+      border-left: 1px solid #44435d;
       padding-left: 32px;
     }
   }
@@ -814,7 +838,7 @@
 // start partners
 
 .partners {
-  background-color: #F9F8F8;
+  background-color: #f9f8f8;
   padding-bottom: 67px;
   &__inner {
     position: relative;
@@ -834,15 +858,15 @@
     z-index: 5;
     padding-left: 34px;
     padding-right: 34px;
-    background-color: #F9F8F8;
+    background-color: #f9f8f8;
   }
 
   &__logotipes {
     display: flex;
     flex-direction: column;
     padding-top: 75px;
-    border-top: 1px solid #44435D;
-    border-bottom: 1px solid #44435D;
+    border-top: 1px solid #44435d;
+    border-bottom: 1px solid #44435d;
   }
 
   &__row {
@@ -856,3 +880,223 @@
     margin: 5px 19px;
   }
 }
+
+//end partners
+//end about page
+
+// start special page
+//start special (promotions)
+
+.special {
+  padding-top: 0;
+
+  &__inner {
+    padding-top: 90px;
+    &::after {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #f3f3f9;
+  }
+
+  &__image {
+    max-width: 528px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    width: 100%;
+    padding: 46px 62px;
+  }
+
+  &__description-text {
+    height: 135px;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    padding: 17px 30px;
+  }
+}
+
+//end special page
+//start contact page
+
+.location {
+  background-color: #F9F8F8;
+
+  &__inner {
+    padding-top: 90px;
+    padding-bottom: 79px;
+  }
+
+  &__contacts-title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__contacts-map {
+    height: 420px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;
+  }
+
+  &__address {
+    max-width: 361px;
+  }
+
+  &__working {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__working-text {
+    margin-bottom: 7px;
+  }
+
+  &__working-mail {
+    color: inherit;
+    @include link;
+  }
+
+  .contacts {
+    &__telephone--icon {
+      &::before {
+        background-image: url(../images/icons/phone.svg);
+      }
+    }
+
+    &__number--display,
+    &__instagramm,
+    &__vk {
+      color: $title;
+      @include link;
+    }
+
+    &__instagramm {
+      padding-left: 40px;
+      &::before {
+        background-image: url(../images/icons/instagram.svg);
+      }
+    }
+
+    &__vk {
+      padding-left: 40px;
+      &::before {
+        background-image: url(../images/icons/vk.svg);
+        top: -4px;
+        height: 31px;
+        width: 31px;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #dc7d7d;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    &--margin {
+      margin-bottom: 49px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+}
+
+.requisites {
+  max-width: 500px;
+  margin-right: 100px;
+  
+  &__title {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    color: #dc7d7d;
+    margin-bottom: 20px;
+  }
+
+  &__phone {
+    color: #dc7d7d;
+    @include link;
+  }
+}
+
+.payment {
+  &__title {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 28px;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 39px;
+  }
+
+  &__images-item {
+    margin-right: 17px;
+  }
+
+  &__rules {
+    font-size: 14px;
+    line-height: 20px;
+    color: $text;
+    text-decoration: underline;
+    cursor: pointer;
+    @include link;
+  }
+}
+
+//end contact page
+//start rules page
+
+.rules {
+  padding-top: 65px;
+  padding-bottom: 94px;
+  background-color: #F9F8F8;
+
+  &__items,
+  &__item {
+    list-style: decimal;
+    padding-left: 25px;
+  }
+
+  &__text-title {
+    padding-top: 56px;
+    margin-bottom: 33px;
+    font-size: 22px;
+    line-height: 32px;
+  }
+  
+  &__phone,
+  &__mail {
+    color: #ae4314;
+  }
+}
+
+//end rules page
+//start hotel-room page
+
+
+
