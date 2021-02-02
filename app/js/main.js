@@ -1,12 +1,16 @@
 $(function () {
 
+  $('.header__burger').on('click', function () {
+    $('.nav').slideToggle();
+  });
+
   $(".form__input-date").flatpickr({
     minDate: "today",
     dateFormat: "d-m-y",
     defaultDate: "today",
   });
 
-  new Swiper('.promotions__items', {
+  let swiper1 = new Swiper('.promotions__items', {
 
     breakpoints: {
       320: {
@@ -19,11 +23,25 @@ $(function () {
         slidesPerView: 3,
       }
     },
-
     loop: true,
     navigation: {
       prevEl: '.promotions__button-prev',
       nextEl: '.promotions__button-next'
+    },
+
+  });
+
+  let swiper2 = new Swiper('.rooms__images-container', {
+
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination'
+    },
+    type: 'bullets',
+    clickable: true,
+    navigation: {
+      prevEl: '.rooms__button-prev1',
+      nextEl: '.rooms__button-next1'
     },
 
   });

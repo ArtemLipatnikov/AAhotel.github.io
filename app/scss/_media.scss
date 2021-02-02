@@ -1,0 +1,588 @@
+@media (max-width: 1200px) {
+  .presentation {
+    &::before {
+      display: none;
+    }
+
+    &__background {
+      width: 100%;
+    }
+
+    &__title {
+      color: #ffffff;
+    }
+
+    &__title-text {
+      color: #ffffff;
+    }
+  }
+
+  .registration {
+    padding-bottom: 30px;
+    &__box-title {
+      padding-top: 30px;
+      text-align: center;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+  }
+
+  .apartments {
+    padding-bottom: 50px;
+    &__items {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .about {
+    &__image1,
+    &__image2,
+    &__image4 {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+
+    &__bottom {
+      background-color: #ffffff;
+    }
+
+    .social {
+      display: none;
+    }
+
+    .nav {
+      &__list-item {
+        font-size: 14px;
+      }
+    }
+
+    .globbutton {
+      padding: 15px 20px;
+    }
+  }
+
+  .presentation {
+    &__box {
+      padding-top: 40px;
+    }
+
+    &__box-advantages {
+      padding-top: 40px;
+      margin-bottom: 0;
+    }
+  }
+
+  .about {
+    &__list {
+      background-color: #f9f8f8;
+      z-index: 5;
+    }
+  }
+
+  .promotions {
+    &__item-text {
+      font-size: 14px;
+    }
+  }
+
+  .special {
+    &__description {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &__link {
+      text-align: center;
+    }
+
+    &__image {
+      max-width: 335px;
+    }
+  }
+
+  .location {
+    &__description {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  .header {
+    &__top-inner {
+      flex-direction: column-reverse;
+      padding-top: 0;
+    }
+
+    &__address {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 26px;
+      font-size: 12px;
+    }
+
+    &__burger {
+      display: block;
+      width: 32px;
+      order: 3;
+      cursor: pointer;
+    }
+
+    &__burger-line {
+      background-color: #000000;
+      height: 3px;
+      width: 32px;
+      margin-bottom: 7px;
+      &--width {
+        width: 25px;
+        margin-left: auto;
+      }
+    }
+
+    .contacts {
+      display: block;
+      margin: 0 auto 11px;
+      &__text,
+      &__telephone {
+        display: none;
+      }
+    }
+
+    .logo {
+      &__image {
+        height: 61px;
+        width: 61px;
+      }
+    }
+
+    .globbutton {
+      padding: 11px 20px;
+      font-size: 11px;
+      line-height: 16px;
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: none;
+      position: absolute;
+      max-width: 770px;
+      bottom: 0;
+      background-color: #44435d;
+      opacity: 0.9;
+      &__list {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      &__list-item {
+        display: block;
+        text-align: center;
+      }
+
+      &__link {
+        color: #ffffff;
+        border-bottom: 1px solid transparent;
+        @include link;
+        &:hover {
+          border-bottom: 1px solid #ae4314;
+        }
+      }
+    }
+  }
+
+  .advantage {
+    &__inner {
+      padding-top: 30px;
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__column {
+      margin: 0 auto;
+    }
+
+    &__item {
+      padding-left: 100px;
+      margin-bottom: 40px;
+    }
+
+    &__item-title {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__item-text {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .presentation {
+    &__box {
+      max-width: 272px;
+      padding-top: 30px;
+      margin-right: 30px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 38px;
+    }
+
+    &__title-text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__box-advantages {
+      padding-top: 30px;
+      padding-left: 10px;
+    }
+  }
+
+  .registration {
+    .form {
+      flex-direction: column;
+      padding-top: 15px;
+      &__input-box {
+        &::before {
+          right: 15px;
+        }
+      }
+
+      &__input-date,
+      &__input-number {
+        width: 100%;
+      }
+
+      &__input-date {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .apartments {
+    padding-bottom: 10px;
+    &__title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    &__item {
+      border: none;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  .promotions {
+    padding-bottom: 10px;
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__item-imagebox,
+    &__item-title,
+    &__item-text {
+      width: auto;
+    }
+
+    &__item-imagebox {
+      margin-bottom: 0;
+    }
+
+    &__item-image {
+      width: 290px;
+      height: 230px;
+    }
+
+    &__item-title {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__item-text {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__item-wrapper {
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer {
+    padding-top: 50px;
+    &__inner {
+      padding-left: 20px;
+    }
+
+    &__top {
+      flex-direction: column;
+    }
+
+    &__menu-title {
+      display: none;
+    }
+
+    &__navigation {
+      justify-content: flex-start;
+      margin-bottom: 10px;
+    }
+
+    &__navigation-column {
+      margin-right: 45px;
+    }
+  }
+
+  .about {
+    padding-bottom: 60px;
+    &__top {
+      flex-direction: column;
+      margin-right: 30px;
+      padding-top: 30px;
+      background-color: #f9f8f8;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      margin-left: 30px;
+      padding-bottom: 30px;
+      background-color: #f9f8f8;
+    }
+
+    &__title {
+      margin-right: 0;
+      padding-top: 20px;
+      padding-left: 32px;
+      background-color: #f9f8f8;
+      max-width: 100%;
+    }
+
+    &__list {
+      font-size: 14px;
+      line-height: 20px;
+      &--border {
+        border-left: none;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .partners {
+    padding-bottom: 30px;
+    &__row {
+      margin-bottom: 0;
+    }
+  }
+
+  .special {
+    &__inner {
+      padding-top: 30px;
+    }
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 290px;
+      flex-direction: column;
+      margin: 0 auto 10px;
+    }
+
+    &__description {
+      padding: 10px;
+      text-align: center;
+    }
+
+    &__link {
+      font-size: 12px;
+      line-height: 18px;
+      padding: 12px 30px;
+    }
+  }
+
+  .location {
+    &__inner {
+      padding-top: 20px;
+    }
+
+    &__description {
+      flex-direction: column;
+    }
+
+    &__address {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+
+  .requisites {
+    max-width: 100%;
+    margin-right: 0;
+    &__title {
+      text-align: center;
+    }
+  }
+
+  .payment {
+    text-align: center;
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+
+  .rules {
+    padding-top: 30px;
+    &__text,
+    &__item-text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__item {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .presentation {
+    &__background {
+      position: relative;
+    }
+
+    &__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__box,
+    &__box-advantages {
+      margin: 0 auto;
+    }
+
+    &__title {
+      color: $title;
+      &::after {
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+
+    &__title-text {
+      color: #686978;
+    }
+  }
+
+  .rooms {
+    padding-top: 20px;
+    &__title {
+      margin-bottom: 20px;
+      padding-left: 16px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__images-container {
+      padding-top: 0;
+      width: 290px;
+      height: 244px;
+    }
+
+    &__item {
+      &::before {
+        left: 0;
+        width: 576px;
+        height: 250px;
+      }
+    }
+
+    &__description {
+      max-width: 290px;
+    }
+
+    &__description-title {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__description-price,
+    &__description-text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__description-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__description-link {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  .rules {
+    &__text,
+    &__item-text {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .nav {
+    display: block !important;
+  }
+}

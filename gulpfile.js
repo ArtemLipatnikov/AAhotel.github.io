@@ -56,7 +56,7 @@ function styles() {
   return src([
     'node_modules/normalize.css/normalize.css',
     'node_modules/flatpickr/dist/flatpickr.css',
-    'node_modules/swiper/swiper.min.css',
+    'node_modules/swiper/swiper-bundle.css',
     'app/scss/style.scss'
   ])
     .pipe(scss({ outputStyle: 'compressed' }))

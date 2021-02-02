@@ -5,11 +5,22 @@
 //start header
 
 .header {
+  background-color: #f9f8f8;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
   &__top {
+    background-color: #ffffff;
+  }
+
+  &__top-inner {
     min-height: 67px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding-top: 20px;
   }
 
   &__address {
@@ -30,7 +41,7 @@
     @include link;
   }
 
-  &__wrapper {
+  &__bottom {
     background-color: $bg;
   }
 
@@ -40,10 +51,14 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__burger {
+    display: none;
+  }
 }
 
 .logo {
-  margin-right: 173px;
+  margin-right: 20px;
   &__image {
     height: 114px;
     width: 114px;
@@ -51,12 +66,12 @@
 }
 
 .nav {
+  max-width: 618px;
   width: 100%;
   &__list {
     display: flex;
     justify-content: space-between;
-    align-items: middle;
-    margin-right: 70px;
+    margin-right: 20px;
   }
 
   &__list-item {
@@ -80,6 +95,8 @@
 .social {
   &__instagramm,
   &__vk {
+    height: 19px;
+    width: 19px;
     font-size: 0;
     position: relative;
     &::before {
@@ -92,11 +109,13 @@
   }
 
   &__vk {
+    height: 31px;
+    width: 31px;
     &::before {
       background-image: url(../images/icons/vk.svg);
       height: 31px;
       width: 31px;
-      left: 20px;
+      left: 10px;
       top: -5px;
     }
   }
@@ -159,12 +178,8 @@
 //start presentation
 
 .presentation {
-  background-image: url(../images/present.jpg);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: $bg;
   position: relative;
+  background-color: #F9F8F8;
   &::before {
     position: absolute;
     content: "";
@@ -175,14 +190,24 @@
     left: 100px;
   }
 
+  &__background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 0;
+  }
+
   &__inner {
     display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   &__box {
     max-width: 350px;
-    min-height: 469px;
     padding-top: 90px;
+    z-index: 1;
   }
 
   &__title {
@@ -220,6 +245,7 @@
     padding-top: 80px;
     padding-left: 30px;
     margin-bottom: 30px;
+    z-index: 1;
   }
 
   &__item {
@@ -257,7 +283,7 @@
 
   &__box-title {
     padding-top: 70px;
-    margin-right: 57px;
+    margin: 0 auto;
   }
 
   &__title {
@@ -280,6 +306,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 44px;
+  margin: 0 auto;
 
   &__col {
     display: flex;
@@ -332,7 +359,7 @@
   &__button {
     padding-left: 53px;
     padding-right: 52px;
-    margin-top: 22px;
+    margin: 22px auto 0;
     font-size: 14px;
     line-height: 18px;
     background-color: transparent;
@@ -362,7 +389,9 @@
   }
 
   &__column {
-    max-width: 46%;
+    max-width: 544px;
+    margin-bottom: 16px;
+    margin-right: 10px;
   }
 
   &__item {
@@ -495,12 +524,14 @@
   }
 
   &__item-link {
-    padding: 15px 34px 15px 36px;
+    padding: 15px 0;
+    width: 100%;
     margin-bottom: 41px;
     font-size: 14px;
     line-height: 20px;
     background-color: #44435d;
     color: #ffffff;
+    text-align: center;
     text-transform: uppercase;
     @include link;
   }
@@ -541,19 +572,21 @@
   &__item-slide {
     max-height: 390px;
     overflow: hidden;
+    text-align: center;
   }
 
   &__item-imagebox {
     height: 264px;
     width: 378px;
+    margin: 0 auto;
     object-fit: cover;
     margin-bottom: 27px;
   }
 
   &__item-title {
-    margin-bottom: 14px;
-    max-height: 64px;
     width: 378px;
+    max-height: 64px;
+    margin-bottom: 14px;
     text-transform: uppercase;
     @include f700;
     font-size: 22px;
@@ -565,7 +598,8 @@
   }
 
   &__item-text {
-    width: 378px;
+    max-width: 378px;
+    margin-bottom: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -580,6 +614,7 @@
     position: relative;
     margin-right: 118px;
     cursor: pointer;
+    outline: none;
     &::before {
       content: "";
       position: absolute;
@@ -593,6 +628,7 @@
     font-size: 0;
     position: relative;
     cursor: pointer;
+    outline: none;
     &::before {
       content: "";
       position: absolute;
@@ -614,9 +650,14 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 36px;
     margin-bottom: 33px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+  }
+
+  &__info-wrapper {
+    margin-bottom: 10px;
   }
 
   &__info {
@@ -642,6 +683,10 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.01%;
+  }
+
+  &__menu {
+    margin-bottom: 10px;
   }
 
   &__menu-title {
@@ -695,6 +740,7 @@
 }
 
 .contacts {
+  margin-bottom: 10px;
   &__title {
     @include f700;
     letter-spacing: 0.03em;
@@ -766,6 +812,7 @@
     margin-right: 50px;
     font-size: 30px;
     line-height: 42px;
+    z-index: 3;
   }
 
   &__list {
@@ -784,19 +831,21 @@
     height: 281px;
     width: 391px;
     object-fit: cover;
-    margin-left: 74px;
+    margin-left: 250px;
     margin-bottom: 20px;
   }
 
   &__image2 {
     height: 341px;
     width: 499px;
+    margin-left: 175px;
     object-fit: cover;
   }
 
   &__image3 {
     height: 647px;
     width: 389px;
+    margin-left:20px;
     object-fit: cover;
   }
 
@@ -814,23 +863,26 @@
     flex-direction: row;
     justify-content: flex-end;
     padding-top: 270px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
+  }
+
+  &__image-wrapper2 {
+    position: absolute;
+    left: -220px;
   }
 
   &__image4 {
-    position: absolute;
     width: 408px;
     height: 575px;
     top: 80px;
-    left: 510px;
+    left: 360px;
   }
 
   &__image5 {
-    position: absolute;
     width: 599px;
     height: 787px;
     top: -85px;
-    left: -120px;
+    left: -260px;
   }
 }
 
@@ -915,7 +967,7 @@
   }
 
   &__description-text {
-    height: 135px;
+    height: 144px;
     margin-bottom: 15px;
   }
 
@@ -1098,5 +1150,160 @@
 //end rules page
 //start hotel-room page
 
+.rooms {
+  background-color: #F9F8F8;
+  padding-top: 90px;
+  padding-bottom: 48px;
 
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
 
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: $title;
+    margin-bottom: 47px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    margin-top: 10px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/rooms-pos.png);
+      top: 0;
+      left: -60px;
+      height: 441px;
+      width: 524px;
+    }
+    &--reverse {
+      flex-direction: row-reverse;
+      &::before {
+        left: 60%;
+      }
+    }
+  }
+
+  &__images-container {
+    padding-top: 20px;
+    height: 441px;
+    width: 524px;
+  }
+  
+  &__image {
+    object-fit: cover;
+  }
+
+  &__button-prev1,
+  &__button-next1 {
+    position: absolute;
+    top: 50%;
+    height: 41px;
+    width: 47px;
+    background-image: url(../images/icons/arrow-left.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #fff;
+    transform: translate(0, -50%);
+    z-index: 10;
+  }
+
+  &__button-next1 {
+    right: 0;
+    background-image: url(../images/icons/arrow-right-white.svg);
+    background-color: rgba(58, 60, 78, 0.79);
+  }
+
+  &__pagination {
+    text-align: left;
+    padding-left: 24px;
+  }
+
+  &__description {
+    max-width: 441px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__description-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    padding-top: 20px;
+  }
+
+  &__description-title {
+    font-size: 24px;
+    line-height: 36px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 123px;
+      bottom: -14px;
+      background-color: #AE4314;;
+    }
+  }
+
+  &__description-price {
+    font-size: 18px;
+    line-height: 26px;
+    color: $title;
+  }
+
+  &__description-box {
+    height: 230px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  &__description-text {
+    letter-spacing: 0.01em;
+    margin-bottom: 14px;
+  }
+
+  &__description-bottom {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 16px;
+  }
+
+  &__description-link {
+    padding: 13px 65px;
+    margin-right: 10px;
+    @include f700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: #44435D;
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      color: #ae4314;
+    }
+    &:active {
+      color: #686978;
+    }
+  }
+
+  &__description-button {
+    padding: 15px 45px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+//end hotel-room page
+
+@import "media";

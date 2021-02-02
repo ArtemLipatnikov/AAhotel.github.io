@@ -12,37 +12,46 @@
 <body>
 
   <header class="header">
-    <div class="container">
+    <div class="header__wrapper">
       <div class="header__top">
-        <a class="header__address" href="contact.html#map">г. Белгород, ул. Николая Островского 27</a>
-        <div class="social">
-          <a class="social__instagramm" href="#">instagramm</a>
-          <a class="social__vk" href="#">vk</a>
-        </div>
-        <div class="contacts">
-          <span class="contacts__text">Позвоните нам:</span>
-          <a class="contacts__telegramm" href="#">telegramm</a>
-          <a class="contacts__whatsapp" href="#">whatsapp</a>
-          <a class="contacts__telephone" href="tel:89995552211">telephone</a>
-          <a class="contacts__number" href="tel:89995552211">8 (999) 555 - 22 - 11</a>
+        <div class="container">
+          <div class="header__top-inner">
+            <a class="header__address" href="contact.html#map">г. Белгород, ул. Николая Островского 27</a>
+            <div class="social">
+              <a class="social__instagramm" href="#">instagramm</a>
+              <a class="social__vk" href="#">vk</a>
+            </div>
+            <div class="contacts">
+              <span class="contacts__text">Позвоните нам:</span>
+              <a class="contacts__telegramm" href="#">telegramm</a>
+              <a class="contacts__whatsapp" href="#">whatsapp</a>
+              <a class="contacts__telephone" href="tel:89995552211">telephone</a>
+              <a class="contacts__number" href="tel:89995552211">8 (999) 555 - 22 - 11</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="header__wrapper">
-      <div class="container">
-        <div class="header__menu">
-          <a class="logo" href="index.html">
-            <img class="logo__image" src="images/logo.png" alt="logo">
-          </a>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__list-item"><a class="nav__link" href="about.html">Об отеле</a></li>
-              <li class="nav__list-item"><a class="nav__link" href="hotel-room.html">Номера</a></li>
-              <li class="nav__list-item"><a class="nav__link" href="special.html">Спецпредложения</a></li>
-              <li class="nav__list-item"><a class="nav__link" href="contact.html">Контакты</a></li>
-            </ul>
-          </nav>
-          <a class="globbutton" href="#">Забронировать</a>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__menu">
+            <a class="logo" href="index.html">
+              <img class="logo__image" src="images/logo.png" alt="logo">
+            </a>
+            <div class="header__burger">
+              <div class="header__burger-line"></div>
+              <div class="header__burger-line header__burger-line--width"></div>
+              <div class="header__burger-line"></div>
+            </div>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__list-item"><a class="nav__link" href="about.html">Об отеле</a></li>
+                <li class="nav__list-item"><a class="nav__link" href="hotel-room.html">Номера</a></li>
+                <li class="nav__list-item"><a class="nav__link" href="special.html">Спецпредложения</a></li>
+                <li class="nav__list-item"><a class="nav__link" href="contact.html">Контакты</a></li>
+              </ul>
+            </nav>
+            <a class="globbutton" href="#">Забронировать</a>
+          </div>
         </div>
       </div>
     </div>
@@ -51,6 +60,7 @@
   <main class="main">
 
     <section class="presentation">
+      <img class="presentation__background" src="images/present.jpg" alt="Отель" >
       <div class="container">
         <div class="presentation__inner">
           <div class="presentation__box">
@@ -88,13 +98,13 @@
             <div class="form__col">
               <label class="form__label" for="date1">Заезд</label>
               <div class="form__input-box">
-                <input class="form__input-date" type="date" name="date" id="date1">
+                <input class="form__input-date" type="text" name="date" id="date1">
               </div>
             </div>
             <div class="form__col">
               <label class="form__label" for="date2">Выезд</label>
               <div class="form__input-box">
-                <input class="form__input-date" type="date" name="date" id="date2">
+                <input class="form__input-date" type="text" name="date" id="date2">
               </div>
             </div>
             <div class="form__col">
@@ -194,7 +204,7 @@
     <section class="promotions">
       <div class="container">
         <div class="promotions__inner">
-          <h2 class="promotions__title title">Акции специально для вас</h2>
+          <h2 class="promotions__title title">Акции<br>специально для вас</h2>
           <div class="promotions__items swiper-container">
             <div class="promotions__item-wrapper  swiper-wrapper">
               <div class="promotions__item-slide swiper-slide">
@@ -286,7 +296,10 @@
         </div>
         <div class="footer__bottom">
           <a class="footer__bottom-link" href="rules.html">Политика конфиденциальности</a>
-          <p class="footer__bottom-text">Обращаем ваше внимание, что данный интернет-сайт, а также вся информация о товарах и ценах, представленная на нем, носит исключительно информативный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации</p>
+          <p class="footer__bottom-text">Обращаем ваше внимание, что данный интернет-сайт, а также вся информация о
+            товарах и ценах, представленная на нем, носит исключительно информативный характер и ни при каких условиях
+            не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации
+          </p>
         </div>
       </div>
     </div>
